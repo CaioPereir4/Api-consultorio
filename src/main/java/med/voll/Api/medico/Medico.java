@@ -1,9 +1,11 @@
 package med.voll.Api.medico;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import med.voll.Api.endereco.Endereco;
+import med.voll.Api.medico.dtos.DadosCadastroMedico;
+import med.voll.Api.medico.dtos.Especialidade;
+import med.voll.Api.medico.dtos.atualizarMedicoDto;
 
 @Table(name = "medicos")
 @Entity(name = "Medico")
@@ -27,8 +29,10 @@ public class Medico {
     private String crm;
 
     @Enumerated(EnumType.STRING)
+
     @Column(nullable = false, length = 70)
     private Especialidade especialidade;
+
     @Embedded
     private Endereco endereco;
 

@@ -5,8 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.Api.endereco.DadosEndereco;
 import med.voll.Api.endereco.Endereco;
+import med.voll.Api.paciente.dtos.PacienteDto;
+import med.voll.Api.paciente.dtos.atualizarPacienteDto;
 
 @Getter
 @EqualsAndHashCode(of = "id")
@@ -25,6 +26,7 @@ public class Paciente {
     private String cpf;
     private String telefone;
     private boolean ativo;
+    
     @Embedded
     private Endereco endereco;
 

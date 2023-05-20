@@ -1,4 +1,4 @@
-package med.voll.Api.paciente;
+package med.voll.Api.paciente.dtos;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
@@ -13,5 +13,6 @@ public record PacienteDto(
         @NotBlank String cpf,
         @NotBlank String telefone,
         @NotNull @Valid DadosEndereco endereco) {
+
 
 }
