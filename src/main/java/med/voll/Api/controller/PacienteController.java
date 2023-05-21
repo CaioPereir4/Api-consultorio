@@ -1,17 +1,18 @@
 package med.voll.Api.controller;
 
 import jakarta.validation.Valid;
-import med.voll.Api.paciente.*;
-import med.voll.Api.paciente.dtos.DetalharPacienteDto;
-import med.voll.Api.paciente.dtos.ListagemPacienteDto;
-import med.voll.Api.paciente.dtos.PacienteDto;
-import med.voll.Api.paciente.dtos.atualizarPacienteDto;
+import med.voll.Api.domain.paciente.Paciente;
+import med.voll.Api.domain.paciente.PacienteRepository;
+import med.voll.Api.domain.paciente.*;
+import med.voll.Api.domain.paciente.dtos.DetalharPacienteDto;
+import med.voll.Api.domain.paciente.dtos.ListagemPacienteDto;
+import med.voll.Api.domain.paciente.dtos.PacienteDto;
+import med.voll.Api.domain.paciente.dtos.atualizarPacienteDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;

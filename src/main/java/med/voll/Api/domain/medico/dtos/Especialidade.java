@@ -1,4 +1,4 @@
-package med.voll.Api.medico.dtos;
+package med.voll.Api.domain.medico.dtos;
 
 public enum Especialidade {
     ORTOPEDIA,CARDIOLOGIA,

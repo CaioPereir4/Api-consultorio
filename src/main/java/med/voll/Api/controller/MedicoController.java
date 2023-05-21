@@ -2,11 +2,13 @@ package med.voll.Api.controller;
 
 
 import jakarta.validation.Valid;
-import med.voll.Api.medico.*;
-import med.voll.Api.medico.dtos.DadosCadastroMedico;
-import med.voll.Api.medico.dtos.DetalhamentoMedicoDto;
-import med.voll.Api.medico.dtos.ListagemMedicoDto;
-import med.voll.Api.medico.dtos.atualizarMedicoDto;
+import med.voll.Api.domain.medico.Medico;
+import med.voll.Api.domain.medico.MedicoRepository;
+import med.voll.Api.domain.medico.*;
+import med.voll.Api.domain.medico.dtos.DadosCadastroMedico;
+import med.voll.Api.domain.medico.dtos.DetalhamentoMedicoDto;
+import med.voll.Api.domain.medico.dtos.ListagemMedicoDto;
+import med.voll.Api.domain.medico.dtos.atualizarMedicoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -42,7 +44,7 @@ public class MedicoController {
 
     @GetMapping("/{id}")
     public ResponseEntity detalharMedicoById(@PathVariable(value = "id") Long id){
-        var medico = repository.getReferenceById(id);
+            var medico = repository.getReferenceById(id);
 
         return ResponseEntity.status(HttpStatus.OK).body(new DetalhamentoMedicoDto(medico));
     }
